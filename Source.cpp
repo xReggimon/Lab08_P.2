@@ -18,7 +18,14 @@ int countWords(string str){
 
 int main() {
 
-	string str = "apple banana c";
-	cout << countWords(str);
+	string str;
+	while (true) {
+		cout << "Enter a string or Q to quit: ";
+		getline(cin, str);
+
+		if (str == "Q" || str == "q") break;
+
+		cout << countWords(str) << endl;
+	}
 	return 0;
 }
